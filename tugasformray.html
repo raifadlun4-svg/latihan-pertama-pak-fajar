@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0">
+        <title>Document</title>
+            <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #f0f8ff, #e6e6fa);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+
+        form {
+            background-color: #ffffff;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #34495e;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        .radio-group {
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            margin-top: 8px;
+        }
+
+        button, input[type="submit"], input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            background-color: #3498db;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover,
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulir Pendaftaran Siswa Baru</h1>
+    <br>
+    <form action="sumbit.php" method="post">
+
+        <p>
+            <label>Nama Lengkap :</label>
+            <br>
+            <input type="text" name="nama lengkap"/>
+        </p>
+        <p>
+            <label>NISN/NIS :</label>
+            <br>
+            <input type="text" name="nama lengkap"/> 
+        </p>
+        <P>
+            <label>Jenis Kelamin :</label>
+            <br>
+            <input type="radio" name="gender" value="laki-laki">laki-laki
+            <input type="radio" name="gender" value="Perempuan">perempuan
+        </P>
+        <p>
+            <label>Tanggal Lahir :</label>
+            <br>
+            <input type="date" name="tanggal" value="tanggal lahir">
+        </p>
+
+        <p>
+            <label>Alamat :</label>
+            <br>
+            <textarea name="alamat" required></textarea>
+        </p>
+        <p>
+            <label>Nomor Telvon :</label>
+            <br>
+            <input type="number" name="nomor telvon"/>
+        </p>
+        <p>
+            <label>Email :</label>
+            <br>
+            <input type="text" name="email"/>
+        </p>
+        <p>
+            <label>Jurusan Yang Dipilih :</label>
+            <br>
+            <select id="jurusan" name="jurusan" required>
+                <option value="" disabled selected hidden></option>
+                <option value="RPL">RPL</option>
+                <option value="TKJ">TKJ</option>
+                <option value="DPIB">DPIB</option>
+            </select>
+        </p>
+        <p>
+            <label>Upload Foto :</label>
+            <br>
+            <input type="file" name="foto[]" accept="image/*"/>
+        </p>
+        <P>
+            <input type="submit" name="submit" value="kirim">
+            <input type="reset" name="reset"/>
+        </p>
+    </form>
+</body>
+</html>
